@@ -2,31 +2,58 @@
     <form ng-show="isEditable()">
         <fieldset>
             <div class="form-group">
-                <label for="firstName">
+                <label for="FirstName">
                     FirstName
                 </label>
-                <input id="firstName" type="text"
-                       ng-model="edit.PhoneRecord.firstName" required
+                <input id="FirstName" type="text"
+                       ng-model="edit.PhoneRecord.FirstName" required
                        class="form-control" />
             </div>
             <div class="form-group">
-                <label for="release">
-                    Release Year
+                <label for="LastName">
+                    LastName
                 </label>
-                <input id="release" type="number"
+                <input id="LastName" type="text"
+                       ng-model="edit.PhoneRecord.LastName" required
+                       class="form-control" />
+            </div>
+            <div class="form-group">
+                <label for="Email">
+                    Email
+                </label>
+                <input id="Email" type="text"
+                       ng-model="edit.PhoneRecord.Email" required
+                       class="form-control" />
+            </div>
+            <div class="form-group">
+                <label for="Birthdate">
+                    Birthday
+                </label>
+                <input id="Birthdate" type="number"
                        ng-model="edit.PhoneRecord.Birthdate"
-                       required min="1900" max="2030"
+                       required min="0" max="99999999"
                        class="form-control" />
             </div>
             <div class="form-group">
                 <label for="Phone">
-                    Length
+                    Phone Number
                 </label>
                 <input id="Phone" type="number"
                        ng-model="edit.PhoneRecord.Phone"
-                       required min="0" max="500"
+                       required min="0" max="9999999999"
                        class="form-control" />
-                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="MediaUrl">
+                    MediaUrl
+                </label>
+                <input id="MediaUrl" type="text"
+                       ng-model="edit.PhoneRecord.MediaUrl" required
+                       class="form-control" />
+            </div>
+
+
             <button class="btn btn-default"
                     ng-click="save()">
                 Save
