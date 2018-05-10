@@ -1,16 +1,16 @@
 ﻿(function (app) {
 
-    //replace $http with my wrapper movieService
-    var DetailsController = function ($scope, $routeParams, movieService) {
+    //replace $http with my wrapper contactService
+    var DetailsController = function ($scope, $routeParams, contactService) {
         var id = $routeParams.id;
-        movieService
+        contactService
         .getById(id)
         .success(function (data) {
-            $scope.movie = data;
+            $scope.PhoneRecord = data;
         });
-        //uses copy of movie so as not to have to undo changes if user cancels edit
+        //uses copy of PhoneRecord so as not to have to undo changes if user cancels edit
         $scope.edit = function () {
-            $scope.edit.movie = angular.copy($scope.movie);
+            $scope.edit.PhoneRecord = angular.copy($scope.PhoneRecord);
         };
 
     };
@@ -18,10 +18,10 @@
 
     //var DetailsController = function ($scope, $http, $routeParams) {
     //    var id = $routeParams.id;
-    //    $http.get("/api/movie/" + id)
+    //    $http.get("/api/PhoneRecord/" + id)
     //    .success(function (data) {
-    //        $scope.movie = data;
+    //        $scope.PhoneRecord = data;
     //    });
     //};
     app.controller("DetailsController", DetailsController);
-}(angular.module("atTheMovies")));
+}(angular.module("contactsRouting")));
