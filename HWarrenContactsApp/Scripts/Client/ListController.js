@@ -34,9 +34,9 @@
         $scope.create = function () {
             $scope.edit = {
                 PhoneRecord: {
-                    FirstName: "",
-                    Phone: 0,
-                    Birthdate: ""
+                    FirstName: "Enter Name Here",
+                    Phone: 9999999999,
+                    Birthdate: 20180101
                 }
             };
         };

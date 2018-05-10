@@ -27,11 +27,11 @@
             </div>
             <div class="form-group">
                 <label for="Birthdate">
-                    Birthday
+                    Birthday (YYYYMMDD, numbers only)
                 </label>
                 <input id="Birthdate" type="number"
                        ng-model="edit.PhoneRecord.Birthdate"
-                       required min="0" max="99999999"
+                       min="0" max="99999999"
                        class="form-control" />
             </div>
             <div class="form-group">
@@ -40,7 +40,7 @@
                 </label>
                 <input id="Phone" type="number"
                        ng-model="edit.PhoneRecord.Phone"
-                       required min="0" max="9999999999"
+                       min="0" max="9999999999"
                        class="form-control" />
             </div>
 
@@ -49,7 +49,7 @@
                     MediaUrl
                 </label>
                 <input id="MediaUrl" type="text"
-                       ng-model="edit.PhoneRecord.MediaUrl" required
+                       ng-model="edit.PhoneRecord.MediaUrl"
                        class="form-control" />
             </div>
 
@@ -63,5 +63,9 @@
                 Cancel
             </button>
         </fieldset>
+    <div ng-app="MyModule" ng-controller="MainCtrl">
+        <p ng-show="loading">Loading...</p>
+        <p ng-hide="loading">Response: {{response}}</p>
+    </div>
     </form>
 </div>
