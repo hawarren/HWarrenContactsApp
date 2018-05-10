@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.ComponentModel.DataAnnotations;
 
 namespace HWarrenContactsApp.Models
 {
-    using System.ComponentModel.DataAnnotations;
 
     public class PhoneRecord
     {
@@ -13,7 +13,6 @@ namespace HWarrenContactsApp.Models
         {
             this.relationshipType = new HashSet<relationshipType>();
         }
-
 
         [Required]
         public string FirstName { get; set; }
@@ -25,8 +24,8 @@ namespace HWarrenContactsApp.Models
         public DateTimeOffset Birthdate { get; set; }
         public string MediaUrl { get; set; }
 
+        public virtual ICollection<relationshipType> relationshipTypes { get; set; }
 
 
-        }
     }
 }

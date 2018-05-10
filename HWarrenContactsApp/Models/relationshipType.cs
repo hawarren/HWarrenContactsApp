@@ -10,6 +10,6 @@ namespace HWarrenContactsApp.Models
     {
         public int Id { get; set; }
 
-        public string relationshipName { get; set; }
+        public List<string> relationshipName { get; set; }
     }
 }
