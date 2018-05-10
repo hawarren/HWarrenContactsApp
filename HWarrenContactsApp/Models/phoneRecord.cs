@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.ComponentModel.DataAnnotations;
+    using System.Data.Entity;
 
 namespace HWarrenContactsApp.Models
 {
@@ -13,6 +14,9 @@ namespace HWarrenContactsApp.Models
         {
             this.relationshipTypes = new HashSet<relationshipType>();
         }
+
+
+        public int Id { get; set; }
 
         [Required]
         public string FirstName { get; set; }
@@ -28,4 +32,10 @@ namespace HWarrenContactsApp.Models
 
 
     }
+
+    public class PhoneRecordDb : DbContext
+    {
+    public DbSet<PhoneRecord> PhoneRecords { get;}
+    }
+
 }
