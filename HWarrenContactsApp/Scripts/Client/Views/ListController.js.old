@@ -1,9 +1,9 @@
 ﻿(function(app) {
 var ListController = function($scope, $http) {
-$http.get("/api/movie")
+$http.get("/api/PhoneRecord")
 .success(function(data) {
-$scope.movies = data;
+$scope.PhoneRecords = data;
 });
 };
 app.controller("ListController", ListController);
-}(angular.module("atTheMovies")));
+}(angular.module("contactsRouting")));

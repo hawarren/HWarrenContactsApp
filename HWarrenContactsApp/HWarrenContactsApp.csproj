@@ -242,11 +242,11 @@
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <Content Include="Scripts\Client\atTheMovies.js" />
+    <Content Include="Scripts\Client\contactsRouting.js" />
     <Content Include="Scripts\Client\DetailsController.js" />
     <Content Include="Scripts\Client\EditController.js" />
     <Content Include="Scripts\Client\ListController.js" />
-    <Content Include="Scripts\Client\movieService.js" />
+    <Content Include="Scripts\Client\contactService.js" />
     <Content Include="Scripts\Client\Views\details.html" />
     <Content Include="Scripts\Client\Views\edit.html" />
     <Content Include="Scripts\Client\Views\list.html" />

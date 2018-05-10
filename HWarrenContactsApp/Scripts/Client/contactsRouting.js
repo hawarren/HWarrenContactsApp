@@ -1,5 +1,5 @@
 ﻿(function () {
-    var app = angular.module("atTheMovies", ["ngRoute"]);
+    var app = angular.module("contactsRouting", ["ngRoute"]);
 
     var config = function($routeProvider) {
         $routeProvider
@@ -12,6 +12,6 @@
     };
     app.config(config);
     //defines certain routing info, specifically the prefix of the api
-    app.constant("movieApiUrl", "/api/movie/");
+    app.constant("contactsApiUrl", "/api/PhoneRecords/");
 
 }());

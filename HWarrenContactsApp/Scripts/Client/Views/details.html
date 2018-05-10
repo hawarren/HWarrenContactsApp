@@ -1,10 +1,10 @@
 ﻿<div ng-controller="DetailsController">
-    <h2>{{movie.Title}}</h2>
+    <h2>{{PhoneRecord.FirstName}}</h2>
     <div>
-        Released in {{movie.ReleaseYear}}.
+        Released in {{PhoneRecord.ReleaseYear}}.
     </div>
     <div>
-        {{movie.Runtime}} minutes long.
+        {{PhoneRecord.Phone}} minutes long.
     </div>
     <button ng-click="edit()">Edit</button>
 <div ng-include="'/Scripts/Client/views/edit.html'"></div>
