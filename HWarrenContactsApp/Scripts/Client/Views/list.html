@@ -1,7 +1,7 @@
 ﻿<div ng-controller="ListController">
     <table class="table">
         <tr ng-repeat="PhoneRecord in PhoneRecords">
-            <td>{{PhoneRecord.FirstName}}</td>
+            <td>{{PhoneRecord.FirstName}} {{PhoneRecord.LastName}}</td>
             <td>
                 <a href="#/details/{{PhoneRecord.Id}}">Details</a>
                 <!-- ng-click listens for a click  event, then runs the method on the objectd (delete method on PhoneRecord object) it -->

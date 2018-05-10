@@ -1,11 +1,27 @@
 ﻿<div ng-controller="DetailsController">
-    <h2>{{PhoneRecord.FirstName}}</h2>
+    <h2>{{PhoneRecord.FirstName}} {{PhoneRecord.LastName}}</h2>
     <div>
         Released in {{PhoneRecord.ReleaseYear}}.
     </div>
     <div>
-        {{PhoneRecord.Phone}} minutes long.
+        Phone number: {{PhoneRecord.Phone}}
+    </div>
+    <div>
+        Email: {{PhoneRecord.Email}}
+    </div>
+    <div>
+        Birthday: {{PhoneRecord.Birthdate}}
+    </div>
+    <b>
+    Additional Info
+
+    </b>
+    <div>
+        Photo: {{PhoneRecord.MediaUrl}}
+    </div>
+    <div>
+        Contact Category: {{PhoneRecord.relationshipTypes}}
     </div>
     <button ng-click="edit()">Edit</button>
-<div ng-include="'/Scripts/Client/views/edit.html'"></div>
+    <div ng-include="'/Scripts/Client/views/edit.html'"></div>
 </div>
