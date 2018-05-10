@@ -1,0 +1,17 @@
+﻿<div ng-controller="ListController">
+    <table class="table">
+        <tr ng-repeat="movie in movies">
+            <td>{{movie.Title}}</td>
+            <td>
+                <a href="#/details/{{movie.Id}}">Details</a>
+                <!-- ng-click listens for a click  event, then runs the method on the objectd (delete method on movie object) it -->
+                <button class="btn btn-default" ng-click="delete(movie)">
+                    Delete
+                </button>
+            </td>
+        </tr>
+    </table>
+    <button class="btn btn-default" ng-click="create()">Create</button>
+<div ng-include="'/Scripts/Client/views/edit.html'">
+</div>
+</div>

@@ -5,12 +5,11 @@ using System.Web;
 
 namespace HWarrenContactsApp.Models
 {
-    public class relationshipType
+    using System.Data.Entity;
 
+    public class PhoneRecordDb : DbContext
     {
-        public int Id { get; set; }
-
-        public List<string> relationshipName { get; set; }
-
+        public DbSet<PhoneRecord> PhoneRecords { get; set; }
     }
+
 }
