@@ -11,7 +11,7 @@ namespace HWarrenContactsApp.Models
     {
         public PhoneRecord()
         {
-            this.relationshipType = new HashSet<relationshipType>();
+            this.relationshipTypes = new HashSet<relationshipType>();
         }
 
         [Required]
