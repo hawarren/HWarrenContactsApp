@@ -7,7 +7,7 @@
                 </label>
                 <input id="FirstName" type="text"
                        ng-model="edit.PhoneRecord.FirstName" required
-                       class="form-control" />
+                       class="form-control"  placeholder="Enter your first name" />
             </div>
             <div class="form-group">
                 <label for="LastName">
@@ -17,6 +17,7 @@
                        ng-model="edit.PhoneRecord.LastName" required
                        class="form-control" />
             </div>
+            <p>Firstname: <input type=”text” ng-model=”model.firstname”></p>
             <div class="form-group">
                 <label for="Email">
                     Email
@@ -29,19 +30,18 @@
                 <label for="Birthdate">
                     Birthday (YYYYMMDD, numbers only)
                 </label>
-                <input id="Birthdate" type="number"
+                <input id="Birthdate" type="date"
                        ng-model="edit.PhoneRecord.Birthdate"
-                       min="0" max="99999999"
-                       class="form-control" />
+                      class="form-control" />
             </div>
             <div class="form-group">
                 <label for="Phone">
                     Phone Number
                 </label>
-                <input id="Phone" type="number"
+                <input id="Phone" type="tel"
                        ng-model="edit.PhoneRecord.Phone"
                        min="0" max="9999999999"
-                       class="form-control" />
+                       class="form-control" placeholder="Enter your number" />
             </div>
 
             <div class="form-group">
@@ -50,7 +50,7 @@
                 </label>
                 <input id="MediaUrl" type="text"
                        ng-model="edit.PhoneRecord.MediaUrl"
-                       class="form-control" />
+                       class="form-control" placeholder="Enter your first name"/>
             </div>
 
 

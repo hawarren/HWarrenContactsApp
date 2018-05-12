@@ -11,7 +11,7 @@
 //};
 
 
-    var MainCtrl = function ($scope, $http) {
+    var MainCtrl = function ($scope, $http, contactsApiUrl) {
   $scope.loading = true;
   $http.post((contactsApiUrl, PhoneRecord)).success(function(response) {
     $scope.response = response;
