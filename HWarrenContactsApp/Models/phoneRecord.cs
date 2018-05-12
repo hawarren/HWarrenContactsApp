@@ -27,6 +27,7 @@ namespace HWarrenContactsApp.Models
         public int Phone { get; set; }
         public DateTimeOffset Birthdate { get; set; }
         public string MediaUrl { get; set; }
+        public string Comments { get; set; }
 
         public virtual ICollection<relationshipType> relationshipTypes { get; set; }
 
