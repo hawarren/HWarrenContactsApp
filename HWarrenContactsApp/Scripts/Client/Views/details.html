@@ -1,21 +1,20 @@
 ﻿<div ng-controller="DetailsController">
     <h2>{{PhoneRecord.FirstName}} {{PhoneRecord.LastName}}</h2>
-    <div>
-        Released in {{PhoneRecord.ReleaseYear}}.
-    </div>
-    <div>
-        Phone number: {{PhoneRecord.Phone}}
-    </div>
+
     <div>
         Email: {{PhoneRecord.Email}}
     </div>
     <div>
-        Birthday: {{PhoneRecord.Birthdate}}
+        Phone number: {{PhoneRecord.Phone}}
     </div>
     <b>
     Additional Info
 
     </b>
+    <div>
+        <!--Birthday: {{PhoneRecord.Birthdate}}-->
+        {{PhoneRecord.Birthdate | date:"MM/dd/yyyy"}}
+    </div>
     <div>
         Photo: {{PhoneRecord.MediaUrl}}
     </div>
