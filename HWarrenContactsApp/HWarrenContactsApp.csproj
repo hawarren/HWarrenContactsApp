@@ -176,6 +176,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="helpers\ImageUploadValidator.cs" />
     <Compile Include="Migrations\201805121904449_Initial2.cs" />
     <Compile Include="Migrations\201805121904449_Initial2.Designer.cs">
       <DependentUpon>201805121904449_Initial2.cs</DependentUpon>

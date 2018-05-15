@@ -24,10 +24,10 @@ namespace HWarrenContactsApp.Models
         public string LastName { get; set; }
         [Required]
         public string Email { get; set; }
-        public int Phone { get; set; }
+        public int? Phone { get; set; }
 
         [DisplayFormat(DataFormatString = "{0:MM/dd/yyyy}", ApplyFormatInEditMode = true)]
-        public DateTimeOffset Birthdate { get; set; }
+        public DateTimeOffset? Birthdate { get; set; }
         public string MediaUrl { get; set; }
         public string Comments { get; set; }
 
