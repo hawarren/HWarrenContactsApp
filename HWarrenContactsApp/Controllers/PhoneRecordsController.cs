@@ -79,7 +79,7 @@ namespace HWarrenContactsApp.Controllers
 
         // POST: api/PhoneRecords
         [ResponseType(typeof(PhoneRecord))]
-        public IHttpActionResult PostPhoneRecord(PhoneRecord phoneRecord, HttpPostedFileBase image)
+        public IHttpActionResult PostPhoneRecord(PhoneRecord phoneRecord/*, HttpPostedFileBase image*/)
         {
             if (!ModelState.IsValid)
             {
@@ -88,12 +88,12 @@ namespace HWarrenContactsApp.Controllers
             if (ModelState.IsValid)
             {
 
-                if (ImageUploadValidator.IsWebFriendlyImage(image))
-                {
-                    var fileName = Path.GetFileName(image.FileName);
-                    image.SaveAs(Path.Combine(System.Web.HttpContext.Current.Server.MapPath("~/Uploads/"), fileName));
-                    phoneRecord.MediaUrl = "/Uploads/" + fileName;
-                }
+                //if (ImageUploadValidator.IsWebFriendlyImage(image))
+                //{
+                //    var fileName = Path.GetFileName(image.FileName);
+                //    image.SaveAs(Path.Combine(System.Web.HttpContext.Current.Server.MapPath("~/Uploads/"), fileName));
+                //    phoneRecord.MediaUrl = "/Uploads/" + fileName;
+                //}
 
                 db.PhoneRecords.Add(phoneRecord);
             db.SaveChanges();
