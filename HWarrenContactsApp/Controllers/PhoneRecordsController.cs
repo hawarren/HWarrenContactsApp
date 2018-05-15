@@ -3,15 +3,22 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
+    using System.IO;
 using System.Linq;
 using System.Net;
-using System.Net.Http;
+using System.Web;
+using System.Web.Mvc;
 using System.Web.Http;
 using System.Web.Http.Description;
 using HWarrenContactsApp.Models;
+using HWarrenContactsApp.helpers;
+using System.Web.Mvc;
 
 namespace HWarrenContactsApp.Controllers
 {
+
+
+
     public class PhoneRecordsController : ApiController
     {
         private PhoneRecordDb db = new PhoneRecordDb();
@@ -72,15 +79,25 @@ namespace HWarrenContactsApp.Controllers
 
         // POST: api/PhoneRecords
         [ResponseType(typeof(PhoneRecord))]
-        public IHttpActionResult PostPhoneRecord(PhoneRecord phoneRecord)
+        public IHttpActionResult PostPhoneRecord(PhoneRecord phoneRecord, HttpPostedFileBase image)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
+            if (ModelState.IsValid)
+            {
 
-            db.PhoneRecords.Add(phoneRecord);
+                if (ImageUploadValidator.IsWebFriendlyImage(image))
+                {
+                    var fileName = Path.GetFileName(image.FileName);
+                    image.SaveAs(Path.Combine(System.Web.HttpContext.Current.Server.MapPath("~/Uploads/"), fileName));
+                    phoneRecord.MediaUrl = "/Uploads/" + fileName;
+                }
+
+                db.PhoneRecords.Add(phoneRecord);
             db.SaveChanges();
+            }
 
             return CreatedAtRoute("DefaultApi", new { id = phoneRecord.Id }, phoneRecord);
         }

@@ -5,7 +5,7 @@ using System.Drawing.Imaging;
 using System.Linq;
 using System.Web;
 
-namespace HWProductionBlog.helpers
+namespace HWarrenContactsApp.helpers
 {
 
     public static class ImageUploadValidator
