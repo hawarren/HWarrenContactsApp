@@ -12,7 +12,7 @@
             <b>Email:</b> {{PhoneRecord.Email}}
         </div>
         <div>
-            <strong>Phone number:</strong> {{PhoneRecord.Phone}}
+            <strong>Phone number:</strong> {{"(" + PhoneRecord.Phone.toString().slice(0,3) + ")" + ' ' + PhoneRecord.Phone.toString().slice(3,6) + '-' + PhoneRecord.Phone.toString().slice(6,10) }}
         </div>
         <b>
             <br />
