@@ -1,35 +1,38 @@
 ﻿<div ng-controller="DetailsController">
     <div class="container">
 
-    <div>
-    <h2>Full Name: {{PhoneRecord.FirstName}} {{PhoneRecord.LastName}}</h2>
+        <div>
+            <u> <h4>Contact Information for:  </h4></u>
 
-    </div>
-    <div>
-        <b>Email:</b> {{PhoneRecord.Email}}
-    </div>
-    <div >
-        <strong>Phone number:</strong> {{PhoneRecord.Phone}}
-    </div>
-    <b>
-        <br/>
-        <u>Additional Info</u>
+        <h5>{{PhoneRecord.LastName}}, {{PhoneRecord.FirstName}} </h5>
 
 
-    </b>
-    <div>
-        <b>Date of Birth:</b> {{PhoneRecord.Birthdate | date:"MM/dd/yyyy"}}
-    </div>
-    <div>
-        <b>Photo:</b> {{PhoneRecord.MediaUrl}}
-    </div>
-    <div>
-        <b>Contact relationship Category</b>: {{PhoneRecord.relationshipTypes}}
-    </div>
-    <div>
-        <b>Comments:</b> {{PhoneRecord.Comments}}
-    </div>
-    <button ng-click="edit()">Edit</button>
+        </div>
+        <div>
+            <b>Email:</b> {{PhoneRecord.Email}}
+        </div>
+        <div>
+            <strong>Phone number:</strong> {{PhoneRecord.Phone}}
+        </div>
+        <b>
+            <br />
+            <u>Additional Info</u>
+
+
+        </b>
+        <div>
+            <b>Date of Birth:</b> {{PhoneRecord.Birthdate | date:"MM/dd/yyyy"}}
+        </div>
+        <div>
+            <b>Photo:</b> {{PhoneRecord.MediaUrl}}
+        </div>
+        <div>
+            <b>Contact relationship Category</b>: {{PhoneRecord.relationshipTypes}}
+        </div>
+        <div>
+            <b>Comments:</b> {{PhoneRecord.Comments}}
+        </div>
+        <button ng-click="edit()">Edit</button>
     </div>
     <div ng-include="'/Scripts/Client/views/edit.html'"></div>
 </div>
