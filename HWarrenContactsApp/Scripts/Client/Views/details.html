@@ -1,7 +1,11 @@
 ﻿<div ng-controller="DetailsController">
+    <div class="container">
 
+    <div>
     <h2>Full Name: {{PhoneRecord.FirstName}} {{PhoneRecord.LastName}}</h2>
 
+    </div>
+    <div>
         <b>Email:</b> {{PhoneRecord.Email}}
     </div>
     <div >
@@ -26,5 +30,6 @@
         <b>Comments:</b> {{PhoneRecord.Comments}}
     </div>
     <button ng-click="edit()">Edit</button>
+    </div>
     <div ng-include="'/Scripts/Client/views/edit.html'"></div>
 </div>
