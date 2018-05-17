@@ -1,89 +1,99 @@
 ﻿
 <div ng-controller="EditController">
     <form ng-show="isEditable()">
-        <fieldset>
-            <div class="form-group">
-                <label for="FirstName">
-                    FirstName
-                </label>
-                <input id="FirstName" type="text"
-                       ng-model="edit.PhoneRecord.FirstName" required
-                       class="form-control" placeholder="Enter your first name required" />
-            </div>
-            <div class="form-group">
-                <label for="LastName">
-                    LastName
-                </label>
-                <input id="LastName" type="text"
-                       ng-model="edit.PhoneRecord.LastName" required
-                       class="form-control" placeholder="Enter your last name (required)" />
-            </div>
+        <div class="container">
+            <fieldset>
+                <div class="row">
 
+                    <div class="form-group col-sm-6 col-md-6 col-lg-6">
+                        <label for="FirstName">
+                            <b>
 
-            <div class="form-group">
-                <label for="Email">
-                    Email
-                </label>
-                <input id="Email" type="text"
-                       ng-model="edit.PhoneRecord.Email" required
-                       class="form-control" placeholder="Enter a valid email address (required)" />
-            </div>
-            <div class="form-group">
-                <label for="Birthdate">
-                    Birthday
-                </label>
+                                FirstName
+                            </b>
+                        </label>
+                        <input id="FirstName" type="text"
+                               ng-model="edit.PhoneRecord.FirstName" required
+                               class="form-control" placeholder="Enter your first name required" />
+                    </div>
+                    <div class="form-group col-sm-6 col-md-6 col-lg-6">
+                        <label for="LastName">
+                            <b>
+                                LastName
+                            </b>
+                        </label>
+                        <input id="LastName" type="text"
+                               ng-model="edit.PhoneRecord.LastName" required
+                               class="form-control" placeholder="Enter your last name (required)" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-sm-6 col-md-6 col-lg-6">
+                        <label for="Email">
+                            <b>
+                                Email
+                            </b>
+                        </label>
+                        <input id="Email" type="text"
+                               ng-model="edit.PhoneRecord.Email" required
+                               class="form-control" placeholder="Enter a valid email address (required)" />
+                    </div>
+                    <div class="form-group col-sm-6 col-md-6 col-lg-6">
+                        <label for="Birthdate">
+                            <b>
+                                Birthday
+                            </b>
+                        </label>
 
-                <input id="Birthdate" type="date"
-                       ng-model="edit.PhoneRecord.Birthdate"
-                       class="form-control" placeholder="Enter your birthday (MM/DD/YYYY)" />
-            </div>
-            <div class="form-group">
-                <label for="Phone">
-                    Phone Number
-                </label>
-                <input id="Phone" type="number"
-                       ng-model="edit.PhoneRecord.Phone" min="0"
-                       max="9999999999"
-                       class="form-control" placeholder="Enter your phone number  digits only" />
-            </div>
-
-            <div class="form-group">
-                <label for="MediaUrl">
-                    MediaUrl
-                </label>
-                <input id="MediaUrl" type="text"
-                       ng-model="edit.PhoneRecord.MediaUrl"
-                       class="form-control" placeholder="Enter the URL for your contact" />
-            </div>
-            <!--<div class="form-group">
-                <label for="Comments">
-                    Comments
-                </label>
-                <input id="Comments" type="text"
-                       ng-model="edit.PhoneRecord.Comments"
-                       class="form-control" placeholder="Enter comments here" />
-            </div>-->
-            <div ng-app="" class="container">
-
-                <div>
-                    <label>Comments</label>
-                    <textarea rows="3" class="form-control" ng-model="edit.PhoneRecord.Comments" maxlength="2000"></textarea>
-                    <p class="text-right">{{ 2000 - edit.PhoneRecord.Comments.length + ' Char' }}</p>
+                        <input id="Birthdate" type="date"
+                               ng-model="edit.PhoneRecord.Birthdate"
+                               class="form-control" placeholder="Enter your birthday (MM/DD/YYYY)" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-sm-6 col-md-6 col-lg-6">
+                        <label for="Phone">
+                            <b>
+                                Phone Number
+                            </b>
+                        </label>
+                        <input id="Phone" type="number"
+                               ng-model="edit.PhoneRecord.Phone" min="0"
+                               max="9999999999"
+                               class="form-control" placeholder="Enter your phone number  digits only" />
                     </div>
 
-            </div>
-
-
-
-            <button class="btn btn-default"
-                    ng-click="save()">
-                Save
-            </button>
-            <button class="btn btn-default"
-                    ng-click="cancel()">
-                Cancel
-            </button>
-        </fieldset>
+                    <div class="form-group col-sm-6 col-md-6 col-lg-6">
+                        <label for="MediaUrl">
+                            <b>
+                                MediaUrl
+                            </b>
+                        </label>
+                        <input id="MediaUrl" type="text"
+                               ng-model="edit.PhoneRecord.MediaUrl"
+                               class="form-control" placeholder="Enter the URL for your contact" />
+                    </div>
+                </div>
+                <div class="form-group col-sm-6 col-md-6 col-lg-6">
+                    <label for="Comments">
+                        <b>
+                        Comments
+                        </b>
+                    </label>
+                    <textarea rows="3" class="form-control" ng-model="edit.PhoneRecord.Comments" maxlength="2000"></textarea>
+                    <p class="text-right">{{ 2000 - edit.PhoneRecord.Comments.length + ' Char' }}</p>
+                </div>
+                <button class="btn btn-default"
+                        ng-click="save()">
+                    Save
+                </button>
+                <button class="btn btn-default"
+                        ng-click="cancel()">
+                    Cancel
+                </button>
+            </fieldset>
+            <div class="clearfix"></div>
+        </div>
         <!--<div ng-app="MyModule" ng-controller="MainCtrl">
             <p ng-show="loading">Loading...</p>
             <p ng-hide="loading">Response: {{response}}</p>
