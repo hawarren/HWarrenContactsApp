@@ -7,7 +7,12 @@
         .getById(id)
         .success(function (data) {
             $scope.PhoneRecord = data;
-        });
+            //add fullname property composed of first and last name
+                $scope.fullName = function() {
+                    return $scope.PhoneRecord.LastName + ", " + $scope.PhoneRecord.FirstName;
+                };
+
+            });
         //uses copy of PhoneRecord so as not to have to undo changes if user cancels edit
         $scope.edit = function () {
             $scope.edit.PhoneRecord = angular.copy($scope.PhoneRecord);

@@ -13,6 +13,21 @@
                 createPhoneRecord();
             }
         };
+        $scope.confirmSave = function() {
+            var txt;
+            if (confirm("Are you sure you want to save?")) {
+                //txt = "You pressed OK!";
+                $scope.save();
+            } else {
+                txt = "You pressed Cancel!";
+            }
+            document.getElementById("hwDemo").innerHTML = txt;
+        }
+        $scope.confirmCancel = function() {
+            if (confirm("Are you sure you want to cancel?")) {
+                $scope.cancel();
+            }
+        }
         var updatePhoneRecord = function () {
             contactService.update($scope.edit.PhoneRecord)
             .success(function () {

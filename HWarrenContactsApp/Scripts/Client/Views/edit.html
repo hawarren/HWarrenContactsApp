@@ -82,18 +82,27 @@
                     <textarea rows="3" class="form-control" ng-model="edit.PhoneRecord.Comments" maxlength="2000"></textarea>
                     <p class="text-right">{{ 2000 - edit.PhoneRecord.Comments.length + ' Characters remaining until limit' }}</p>
                 </div>
-                <button class="btn btn-default"
+                <!--<button class="btn btn-default"
                         ng-click="save()">
                     Save
                 </button>
                 <button class="btn btn-default"
                         ng-click="cancel()">
                     Cancel
+                </button>-->
+
+                <button class="btn btn-default"
+                        ng-click="confirmSave()">
+                    Save contact
+                </button>
+                <button class="btn btn-default"
+                        ng-click="confirmCancel()">
+                    Cancel
                 </button>
             </fieldset>
             <div class="clearfix"></div>
 
-
+            <!--Experiment to see contact details updated using 2way binding-->
                 <p>Input something in the input box:</p>
                 <p>Name : <input type="text" ng-model="name" placeholder="Enter name here"></p>
                 <h1>Hello {{name}}</h1>
