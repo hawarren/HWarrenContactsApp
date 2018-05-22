@@ -50,8 +50,6 @@ angular.module('MyModule', [], function($httpProvider) {
 
 
 
-
-
 	var config = function($routeProvider) {
 		$routeProvider
 			.when("/list",

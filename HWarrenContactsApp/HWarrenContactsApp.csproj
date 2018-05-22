@@ -136,6 +136,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Uploads\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
@@ -252,6 +253,7 @@
     <Content Include="Scripts\Client\EditController.js" />
     <Content Include="Scripts\Client\ListController.js" />
     <Content Include="Scripts\Client\contactService.js" />
+    <Content Include="Scripts\Client\UploadController.js" />
     <Content Include="Scripts\Client\Views\details.html" />
     <Content Include="Scripts\Client\Views\edit.html" />
     <Content Include="Scripts\Client\Views\list.html" />

@@ -16,6 +16,7 @@
         //uses copy of PhoneRecord so as not to have to undo changes if user cancels edit
         $scope.edit = function () {
             $scope.edit.PhoneRecord = angular.copy($scope.PhoneRecord);
+
         };
 
     };
