@@ -68,9 +68,19 @@
                                 MediaUrl
                             </b>
                         </label>
-                        <input id="MediaUrl" type="text"
-                               ng-model="edit.PhoneRecord.MediaUrl"
-                               class="form-control" style="background-color: lightgrey" placeholder="Enter the URL for your contact" />
+                        <!--<input id="MediaUrl" type="text"
+                                   ng-model="edit.PhoneRecord.MediaUrl"
+                                   class="form-control" style="background-color: lightgrey" placeholder="Enter the URL for your contact" />-->
+                        {{$scope.makeMediaUrl()}} is the name
+                        of  photo of this user
+                        <!--<div ng-repeat="step in stepsModel">
+                            <img class="thumb" ng-src="{ {step}}" />
+                        </div>-->
+                        <div>
+
+                            <img class="thumb" ng-src="{{stepsModel}}" />
+                        </div>
+                        <input id="MediaUrl" class="form-control" type='file' ng-model="edit.PhoneRecord.MediaUrl" onchange="angular.element(this).scope().imageUpload(this)" />
                     </div>
                 </div>
                 <div class="form-group col-sm-6 col-md-6 col-lg-6">
@@ -80,7 +90,7 @@
                         </b>
                     </label>
                     <textarea rows="3" class="form-control" ng-model="edit.PhoneRecord.Comments" maxlength="2000"></textarea>
-                    <p class="text-right">{{ 2000 - edit.PhoneRecord.Comments.length + ' Characters remaining until limit' }}</p>
+                    <p class="text-left" placeholder="Enter the URL for your contact">{{"You have up to " + (2000 - edit.PhoneRecord.Comments.length) + ' Characters remaining until limit' }}</p>
                 </div>
                 <!--<button class="btn btn-default"
                             ng-click="save()">
@@ -102,22 +112,14 @@
             </fieldset>
             <div class="clearfix"></div>
 
-            <!--Experiment to see contact details updated using 2way binding-->
-            <p>Input something in the input box:</p>
-            <p>Name : <input type="text" ng-model="name" placeholder="Enter name here"></p>
-            <h1>Hello {{name}}</h1>
+
 
         </div>
         <!--<div ng-app="contactsRouting" ng-controller="MainCtrl">
             <p ng-show="loading">Loading...</p>
             <p ng-hide="loading">Response: {{response}}</p>
         </div>-->
-    Attach a photo of this user
-    <div ng-repeat="step in stepsModel">
-        <img class="thumb" ng-src="{{step}}" />
-    </div>
 
-    <input type='file' ng-model-instant onchange="angular.element(this).scope().imageUpload(this)" />
     </form>
 
 </div>

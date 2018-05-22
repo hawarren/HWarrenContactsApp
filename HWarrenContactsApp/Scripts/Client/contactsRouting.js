@@ -49,6 +49,15 @@ angular.module('MyModule', [], function($httpProvider) {
 });
 
 
+	var MainCtrl = function ($scope, $http, contactsApiUrl) {
+		$scope.loading = true;
+  $http.post((contactsApiUrl, PhoneRecord)).success(function(response) {
+	$scope.response = response;
+	$scope.loading = false;
+  });
+
+
+};
 
 	var config = function($routeProvider) {
 		$routeProvider

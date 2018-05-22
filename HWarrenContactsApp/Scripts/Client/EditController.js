@@ -45,17 +45,33 @@
 
 	//added from fiddle http://jsfiddle.net/hwarrendev/2cdn17uv/7/
 	//removed from it's own controller, instead added to editcontroller
-	$scope.stepsModel = [];
+		//no need for array here
+		//$scope.stepsModel = [];
+				$scope.stepsModel = "";
 
-	$scope.imageUpload = function(element){
-		var reader = new FileReader();
-		reader.onload = $scope.imageIsLoaded;
-		reader.readAsDataURL(element.files[0]);
+
+		$scope.imageUpload = function(element) {
+			var reader = new FileReader();
+			reader.onload = $scope.imageIsLoaded;
+			reader.readAsDataURL(element.files[0]);
+			$scope.makeMediaUrl = function() {
+
+				 $scope.MediaUrl = element.files[0].name;
+				return $scope.MediaUrl
+			}
+
+		};
+
 	}
 
 	$scope.imageIsLoaded = function(e){
-		$scope.$apply(function() {
-			$scope.stepsModel.push(e.target.result);
+		$scope.$apply(function () {
+			//since it's not an array, no .push needed
+			//$scope.stepsModel.push(e.target.result);
+			$scope.stepsModel = e.target.result;
+			//$scope.PhoneRecord.
+
+
 		});
 	}
 
