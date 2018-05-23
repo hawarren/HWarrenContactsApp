@@ -5,6 +5,8 @@ namespace HWarrenContactsApp.Migrations
     using System.Data.Entity.Migrations;
     using System.Linq;
 
+    using HWarrenContactsApp.Models;
+
     internal sealed class Configuration : DbMigrationsConfiguration<HWarrenContactsApp.Models.PhoneRecordsDb>
     {
         public Configuration()
@@ -26,6 +28,13 @@ namespace HWarrenContactsApp.Migrations
             //      new Person { FullName = "Rowan Miller" }
             //    );
             //
+            context.PhoneRecords.Add(new PhoneRecord
+                                         {
+                                             Id = 1,
+                                             FirstName = "Seedy1",
+                                             LastName = "McSeedy1",
+                                             Email = "Seedy1@McSeedy1@gmail.com"
+                                         });
         }
     }
 }

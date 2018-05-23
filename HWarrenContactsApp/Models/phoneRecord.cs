@@ -11,10 +11,10 @@ namespace HWarrenContactsApp.Models
 
     public class PhoneRecord
     {
-        public PhoneRecord()
-        {
-            this.relationshipTypes = new HashSet<relationshipType>();
-        }
+       // public PhoneRecord()
+        //{
+          //  this.relationshipTypes = new HashSet<relationshipType>();
+        //}
 
 
         public int Id { get; set; }
@@ -33,7 +33,7 @@ namespace HWarrenContactsApp.Models
         [AllowHtml]
         public string Comments { get; set; }
 
-        public virtual ICollection<relationshipType> relationshipTypes { get; set; }
+        //public virtual ICollection<relationshipType> relationshipTypes { get; set; }
 
 
     }
