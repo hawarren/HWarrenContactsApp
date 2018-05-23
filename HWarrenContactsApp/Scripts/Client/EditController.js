@@ -8,11 +8,11 @@
 		};
 		$scope.save = function () {
 			if ($scope.edit.PhoneRecord.Id) {
-			    updatePhoneRecord();
-			    $scope.ImageNameIs = $scope.stepsModel;
+				updatePhoneRecord();
+				$scope.ImageNameIs = $scope.stepsModel;
 			} else {
-			    createPhoneRecord();
-            			    $scope.ImageNameIs = $scope.stepsModel;
+				createPhoneRecord();
+							$scope.ImageNameIs = $scope.stepsModel;
 
 			}
 		};
@@ -66,7 +66,7 @@
 			var reader = new FileReader();
 			reader.onload = $scope.imageIsLoaded;
 			reader.readAsDataURL(element.files[0]);
-		    $scope.resultImage = reader.result.name;
+			$scope.resultImage = reader.result.name;
 
 			//upload image as soon as it's picked
 			var data = new FormData();
@@ -83,17 +83,9 @@
 			processData: false,
 			data: data
 		});
-		    //sample filename select
-		$scope.getname = function () {
-     var fullPath = document.getElementById("img1").src;
-     //var filename = fullPath.replace(/^.*[\\\/]/, '');
-     // or, try this,
-      var filename = fullPath.split("/").pop();
-
-    document.getElementById("result").value = filename;
- }
-
-            //end of sample filename select
+			//sample filename select
+			$scope.setFile(element);
+			//end of sample filename select
 
 
 		};
@@ -102,14 +94,20 @@
 			$scope.$apply(function () {
 				//since it's not an array, no .push needed
 				//$scope.stepsModel.push(e.target.result);
-			    $scope.stepsModel = event.target.result;
-			    $scope.ImageNameIs = event.target.result.name;
+				$scope.stepsModel = event.target.result;
+				$scope.ImageNameIs = event.target.result.name;
 
 
 			});
 		};
 
+		//code to get file name from http://www.java2s.com/Tutorials/AngularJS/AngularJS_Example/Form/Store_file_name_to_scope_for_file_input.htm
+		$scope.setFile = function(element) {
+			$scope.$apply(function($scope) {
+				$scope.theFile = element.files[0];
+			});
 
+		};
 
 	};
 	app.controller("EditController", EditController);
