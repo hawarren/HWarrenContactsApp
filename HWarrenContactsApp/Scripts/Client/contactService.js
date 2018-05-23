@@ -15,10 +15,6 @@
         var destroy = function (PhoneRecord) {
             return $http.delete(contactsApiUrl + PhoneRecord.Id);
         };
-        //uploading image function
-
-
-
 
 
         return {
