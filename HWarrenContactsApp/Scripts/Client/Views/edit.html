@@ -68,18 +68,22 @@
                                 MediaUrl (User Photo)
                             </b>
                         </label>
+                        <input id="MediaUrl" type="text"
+                               ng-model="edit.PhoneRecord.MediaUrl"
+                               class="form-control" style="background-color: lightgrey" placeholder="The image filename goes here" />
                         <div>
                             <img class="thumb" ng-src="{{stepsModel}}" id="img1" />
 
                         </div>
-                        <input type='file' ng-model="edit.PhoneRecord.MediaUrl" onchange="angular.element(this).scope().imageUpload(this)" />
+                        <input type='file'  onchange="angular.element(this).scope().imageUpload(this)" />
 
-                        <br />
-                        <input type="text" id="result" />
-                        <br /><br />
-                        <strong>this file is called {{theFile.name}}</strong>
-                        <div>or {{resultImage}}</div>
 
+
+
+                    </div>
+                    <div ng-model="edit.PhoneRecord.MediaUrl">
+
+                        <strong>{{theFile.name}}</strong>
                     </div>
                 </div>
                 <div class="form-group col-sm-6 col-md-6 col-lg-6">

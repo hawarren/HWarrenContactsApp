@@ -202,9 +202,6 @@
     <Content Include="Content\bootstrap-reboot.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\css\bootstrap.min.css" />
-    <Content Include="Content\css\images\glyphicons-halflings-white.png" />
-    <Content Include="Content\css\images\glyphicons-halflings.png" />
     <Content Include="favicon.ico" />
     <Content Include="FileUploadView.html" />
     <Content Include="Global.asax" />
@@ -260,12 +257,9 @@
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\Client\contactsRouting.js" />
     <Content Include="Scripts\Client\DetailsController.js" />
-    <Content Include="Scripts\Client\directives.js" />
     <Content Include="Scripts\Client\EditController.js" />
     <Content Include="Scripts\Client\ListController.js" />
     <Content Include="Scripts\Client\contactService.js" />
-    <Content Include="Scripts\Client\Upload.js" />
-    <Content Include="Scripts\Client\UploadController.js" />
     <Content Include="Scripts\Client\Views\details.html" />
     <Content Include="Scripts\Client\Views\edit.html" />
     <Content Include="Scripts\Client\Views\list.html" />
@@ -1051,8 +1045,6 @@
     <Content Include="Scripts\jquery-3.3.1.slim.js" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
-    <Content Include="Scripts\ng-upload.js" />
-    <Content Include="Scripts\ng-upload.min.js" />
     <Content Include="Scripts\popper-utils.js" />
     <Content Include="Scripts\popper-utils.min.js" />
     <Content Include="Scripts\popper.js" />

@@ -9,10 +9,9 @@
 		$scope.save = function () {
 			if ($scope.edit.PhoneRecord.Id) {
 				updatePhoneRecord();
-				$scope.ImageNameIs = $scope.stepsModel;
+
 			} else {
 				createPhoneRecord();
-							$scope.ImageNameIs = $scope.stepsModel;
 
 			}
 		};
@@ -72,18 +71,19 @@
 			var data = new FormData();
 			var files = element.files;
 			if (files.length > 0) {
-			data.append("UploadedImage", files[0]);
+				data.append("UploadedImage", files[0]);
 			}
 			//Ajax request with the contentType = false, and processDate = false
-		var ajaxRequest = $.ajax({
-			type: "POST",
-			//make sure this uri is correct
-			url: "http://localhost:51072/api/FileUploads",
-			contentType: false,
-			processData: false,
-			data: data
-		});
+			var ajaxRequest = $.ajax({
+				type: "POST",
+				//make sure this uri is correct
+				url: "http://localhost:51072/api/FileUploads",
+				contentType: false,
+				processData: false,
+				data: data
+			});
 			//sample filename select
+			//get the filename after we upload the file and send to server
 			$scope.setFile(element);
 			//end of sample filename select
 
@@ -102,9 +102,10 @@
 		};
 
 		//code to get file name from http://www.java2s.com/Tutorials/AngularJS/AngularJS_Example/Form/Store_file_name_to_scope_for_file_input.htm
-		$scope.setFile = function(element) {
-			$scope.$apply(function($scope) {
+		$scope.setFile = function (element) {
+			$scope.$apply(function ($scope) {
 				$scope.theFile = element.files[0];
+			    $scope.edit.PhoneRecord.MediaUrl = $scope.theFile.name;
 			});
 
 		};
