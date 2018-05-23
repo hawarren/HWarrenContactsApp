@@ -137,6 +137,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Uploads\" />
+    <Folder Include="Views\ImageUpload\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
@@ -172,6 +173,7 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ImageUploadController.cs" />
     <Compile Include="Controllers\PhoneRecordsController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
@@ -1082,6 +1084,12 @@
     <Content Include="Scripts\popper-utils.min.js.map" />
     <Content Include="Scripts\popper-utils.js.map" />
     <Content Include="Scripts\version.json" />
+    <None Include="Views\Shared\_ImageUploaderView.cshtm.oldl" />
+    <Content Include="Views\PhoneRecords\Create.cshtml" />
+    <Content Include="Views\PhoneRecords\Delete.cshtml" />
+    <Content Include="Views\PhoneRecords\Details.cshtml" />
+    <Content Include="Views\PhoneRecords\Edit.cshtml" />
+    <Content Include="Views\PhoneRecords\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="Scripts\index.d.ts" />

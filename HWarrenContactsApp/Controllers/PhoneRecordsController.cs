@@ -21,7 +21,7 @@ namespace HWarrenContactsApp.Controllers
 
     public class PhoneRecordsController : ApiController
     {
-        private PhoneRecordDb db = new PhoneRecordDb();
+        private PhoneRecordsDb db = new PhoneRecordsDb();
 
         // GET: api/PhoneRecords
         public IQueryable<PhoneRecord> GetPhoneRecords()

@@ -38,7 +38,7 @@ namespace HWarrenContactsApp.Models
 
     }
 
-    //public class PhoneRecordDb : DbContext
+    //public class PhoneRecordsDb : DbContext
     //{
     //public DbSet<PhoneRecord> PhoneRecords { get; set; }
     //}

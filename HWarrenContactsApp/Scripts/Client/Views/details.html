@@ -1,4 +1,5 @@
-﻿<div ng-controller="DetailsController">
+﻿@using System.Web.Mvc.Html
+<div ng-controller="DetailsController">
     <div class="container">
 
         <div>
@@ -17,6 +18,7 @@
         <b>
             <br />
             <u>Additional Info</u>
+             @Html.Partial("_ImageUploaderView")"
 
 
         </b>

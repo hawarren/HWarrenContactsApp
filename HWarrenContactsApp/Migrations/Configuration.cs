@@ -5,14 +5,14 @@ namespace HWarrenContactsApp.Migrations
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<HWarrenContactsApp.Models.PhoneRecordDb>
+    internal sealed class Configuration : DbMigrationsConfiguration<HWarrenContactsApp.Models.PhoneRecordsDb>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = true;
         }
 
-        protected override void Seed(HWarrenContactsApp.Models.PhoneRecordDb context)
+        protected override void Seed(HWarrenContactsApp.Models.PhoneRecordsDb context)
         {
             //  This method will be called after migrating to the latest version.
 

@@ -7,7 +7,7 @@ namespace HWarrenContactsApp.Models
 {
     using System.Data.Entity;
 
-    public class PhoneRecordDb : DbContext
+    public class PhoneRecordsDb : DbContext
     {
         public DbSet<PhoneRecord> PhoneRecords { get; set; }
     }
