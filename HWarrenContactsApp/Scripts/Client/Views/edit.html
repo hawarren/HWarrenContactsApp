@@ -62,17 +62,17 @@
                                class="form-control" style="background-color: lightgrey" placeholder="Enter your phone number  digits only" />
                     </div>
 
-                    <div class="form-group col-sm-6 col-md-6 col-lg-6">
+                      <div class="form-group col-sm-6 col-md-6 col-lg-6">
                         <label for="MediaUrl">
                             <b>
                                 MediaUrl (User Photo)
                             </b>
                         </label>
-                        <!--<input id="MediaUrl" type="text"
-                                   ng-model="edit.PhoneRecord.MediaUrl"
-                                   class="form-control" style="background-color: lightgrey" placeholder="Enter the URL for your contact" />-->
+                        <div>
+                            <img class="thumb" ng-src="{{stepsModel}}" />
 
-                      <input name="image" type="file" class="form-control" id="fileUpload"/>
+                        </div>
+                         <input type='file' ng-model-instant onchange="angular.element(this).scope().imageUpload(this)" />
 
 
                     </div>
@@ -84,7 +84,7 @@
                         </b>
                     </label>
                     <textarea rows="3" class="form-control" ng-model="edit.PhoneRecord.Comments" maxlength="2000"></textarea>
-                    <p class="text-left" placeholder="Enter the URL for your contact">{{"You have up to " + (2000 - edit.PhoneRecord.Comments.length) + ' Characters remaining until limit'}}</p>
+                    <p class="text-left">{{"You have up to " + (2000 - edit.PhoneRecord.Comments.length) + ' Characters remaining until limit'}}</p>
                 </div>
                 <!--<button class="btn btn-default"
                             ng-click="save()">

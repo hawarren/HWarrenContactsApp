@@ -22,6 +22,7 @@ namespace HWarrenContactsApp.Controllers
     public class PhoneRecordsController : ApiController
     {
         private PhoneRecordsDb db = new PhoneRecordsDb();
+        private FileUploadContext dbfu = new FileUploadContext();
 
         // GET: api/PhoneRecords
         public IQueryable<PhoneRecord> GetPhoneRecords()
@@ -94,6 +95,11 @@ namespace HWarrenContactsApp.Controllers
                 //    image.SaveAs(Path.Combine(System.Web.HttpContext.Current.Server.MapPath("~/Uploads/"), fileName));
                 //    phoneRecord.MediaUrl = "/Uploads/" + fileName;
                 //}
+
+
+
+
+
 
                 db.PhoneRecords.Add(phoneRecord);
             db.SaveChanges();
