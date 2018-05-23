@@ -72,10 +72,21 @@
                             <img class="thumb" ng-src="{{stepsModel}}" />
 
                         </div>
-                         <input type='file' ng-model-instant onchange="angular.element(this).scope().imageUpload(this)" />
+                          <input type='file' onchange="angular.element(this).scope().imageUpload(this)" />
+
+                          <br/>
+                          newer upload button
+                          <label for="fileUpload">
+                    Select File to Upload:
+                    <input id="fileUpload" type="file" name="files" />
+                    <br />
+                    <br />
+                    <input id="btnUploadFile" type="button" value="Upload File" class="btn-primary" />
+
+                </label>
 
 
-                    </div>
+                      </div>
                 </div>
                 <div class="form-group col-sm-6 col-md-6 col-lg-6">
                     <label for="Comments">

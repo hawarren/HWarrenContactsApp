@@ -1,4 +1,5 @@
-﻿$(document).ready(function() {
+﻿$(document).ready(
+    function () {
     $('#btnUploadFile').
     on('click', function() {
         var data = new FormData()
@@ -17,4 +18,5 @@
             data: data
         });
     });
-});
+    })
+;

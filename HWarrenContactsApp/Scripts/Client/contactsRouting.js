@@ -59,7 +59,13 @@ angular.module('MyModule', [], function($httpProvider) {
 
 };
 
-	var config = function($routeProvider) {
+
+    var uploadImage = function($scope) {
+
+    }
+
+
+    var config = function($routeProvider) {
 		$routeProvider
 			.when("/list",
 				{ templateUrl: "/scripts/client/views/list.html" })
