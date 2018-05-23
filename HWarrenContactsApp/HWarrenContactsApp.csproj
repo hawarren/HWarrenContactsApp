@@ -260,6 +260,7 @@
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\Client\contactsRouting.js" />
     <Content Include="Scripts\Client\DetailsController.js" />
+    <Content Include="Scripts\Client\directives.js" />
     <Content Include="Scripts\Client\EditController.js" />
     <Content Include="Scripts\Client\ListController.js" />
     <Content Include="Scripts\Client\contactService.js" />

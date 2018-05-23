@@ -66,6 +66,7 @@
 			var reader = new FileReader();
 			reader.onload = $scope.imageIsLoaded;
 			reader.readAsDataURL(element.files[0]);
+		    $scope.resultImage = reader.result.name;
 
 			//upload image as soon as it's picked
 			var data = new FormData();
@@ -103,6 +104,7 @@
 				//$scope.stepsModel.push(e.target.result);
 			    $scope.stepsModel = event.target.result;
 			    $scope.ImageNameIs = event.target.result.name;
+
 
 			});
 		};

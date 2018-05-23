@@ -72,13 +72,13 @@
                             <img class="thumb" ng-src="{{stepsModel}}" id="img1" />
 
                         </div>
-                        <input type='file' onchange="angular.element(this).scope().imageUpload(this)" />
+                        <input type='file' ng-model="edit.PhoneRecord.MediaUrl" onchange="angular.element(this).scope().imageUpload(this)" />
 
                         <br />
                         <input type="text" id="result" />
                         <br /><br />
                         <strong>this file is called {{getname()}}</strong>
-                        <div>or {{ImageNameIs}}</div>
+                        <div>or {{resultImage}}</div>
 
                     </div>
                 </div>
