@@ -30,7 +30,7 @@ namespace HWarrenContactsApp.Models
         [DisplayFormat(DataFormatString = "{0:MM/dd/yyyy}", ApplyFormatInEditMode = true)]
         public DateTimeOffset? Birthdate { get; set; }
 
-        //public string MediaUrl { get; set; }
+        public string MediaUrl { get; set; }
         public int? FileUploadId { get; set; }
         [AllowHtml]
         public string Comments { get; set; }

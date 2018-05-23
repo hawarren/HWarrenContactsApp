@@ -8,9 +8,12 @@
 		};
 		$scope.save = function () {
 			if ($scope.edit.PhoneRecord.Id) {
-				updatePhoneRecord();
+			    updatePhoneRecord();
+			    $scope.ImageNameIs = $scope.stepsModel;
 			} else {
-				createPhoneRecord();
+			    createPhoneRecord();
+            			    $scope.ImageNameIs = $scope.stepsModel;
+
 			}
 		};
 		$scope.confirmSave = function () {
@@ -79,6 +82,17 @@
 			processData: false,
 			data: data
 		});
+		    //sample filename select
+		$scope.getname = function () {
+     var fullPath = document.getElementById("img1").src;
+     //var filename = fullPath.replace(/^.*[\\\/]/, '');
+     // or, try this,
+      var filename = fullPath.split("/").pop();
+
+    document.getElementById("result").value = filename;
+ }
+
+            //end of sample filename select
 
 
 		};
@@ -87,7 +101,8 @@
 			$scope.$apply(function () {
 				//since it's not an array, no .push needed
 				//$scope.stepsModel.push(e.target.result);
-				$scope.stepsModel = event.target.result;
+			    $scope.stepsModel = event.target.result;
+			    $scope.ImageNameIs = event.target.result.name;
 
 			});
 		};

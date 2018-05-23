@@ -62,31 +62,25 @@
                                class="form-control" style="background-color: lightgrey" placeholder="Enter your phone number  digits only" />
                     </div>
 
-                      <div class="form-group col-sm-6 col-md-6 col-lg-6">
+                    <div class="form-group col-sm-6 col-md-6 col-lg-6">
                         <label for="MediaUrl">
                             <b>
                                 MediaUrl (User Photo)
                             </b>
                         </label>
                         <div>
-                            <img class="thumb" ng-src="{{stepsModel}}" />
+                            <img class="thumb" ng-src="{{stepsModel}}" id="img1" />
 
                         </div>
-                          <input type='file' onchange="angular.element(this).scope().imageUpload(this)" />
+                        <input type='file' onchange="angular.element(this).scope().imageUpload(this)" />
 
-                          <br/>
-                          newer upload button
-                          <label for="fileUpload">
-                    Select File to Upload:
-                    <input id="fileUpload" type="file" name="files" />
-                    <br />
-                    <br />
-                    <input id="btnUploadFile" type="button" value="Upload File" class="btn-primary" />
+                        <br />
+                        <input type="text" id="result" />
+                        <br /><br />
+                        <strong>this file is called {{getname()}}</strong>
+                        <div>or {{ImageNameIs}}</div>
 
-                </label>
-
-
-                      </div>
+                    </div>
                 </div>
                 <div class="form-group col-sm-6 col-md-6 col-lg-6">
                     <label for="Comments">
@@ -98,13 +92,13 @@
                     <p class="text-left">{{"You have up to " + (2000 - edit.PhoneRecord.Comments.length) + ' Characters remaining until limit'}}</p>
                 </div>
                 <!--<button class="btn btn-default"
-                            ng-click="save()">
-                    Save
-                </button>
-                <button class="btn btn-default"
-                        ng-click="cancel()">
-                    Cancel
-                </button>-->
+                    ng-click="save()">
+            Save
+        </button>
+        <button class="btn btn-default"
+                ng-click="cancel()">
+            Cancel
+        </button>-->
 
                 <button class="btn btn-default"
                         ng-click="confirmSave()">
