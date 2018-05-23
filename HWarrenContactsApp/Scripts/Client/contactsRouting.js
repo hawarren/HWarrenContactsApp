@@ -64,7 +64,7 @@ angular.module('MyModule', [], function($httpProvider) {
 			.when("/list",
 				{ templateUrl: "/scripts/client/views/list.html" })
 			.when("/details/:id",
-				{ templateUrl: "/scripts/client/views/details.cshtml" })
+				{ templateUrl: "/scripts/client/views/details.html" })
 			.otherwise(
 				{ redirectTo: "/list" });
 	};
