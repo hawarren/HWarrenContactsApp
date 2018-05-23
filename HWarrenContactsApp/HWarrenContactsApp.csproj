@@ -206,6 +206,7 @@
     <Content Include="Content\css\images\glyphicons-halflings-white.png" />
     <Content Include="Content\css\images\glyphicons-halflings.png" />
     <Content Include="favicon.ico" />
+    <Content Include="FileUploadView.html" />
     <Content Include="Global.asax" />
     <Content Include="Areas\HelpPage\Views\Web.config" />
     <Content Include="Areas\HelpPage\Views\Shared\_Layout.cshtml" />
@@ -263,6 +264,7 @@
     <Content Include="Scripts\Client\EditController.js" />
     <Content Include="Scripts\Client\ListController.js" />
     <Content Include="Scripts\Client\contactService.js" />
+    <Content Include="Scripts\Client\Upload.js" />
     <Content Include="Scripts\Client\UploadController.js" />
     <Content Include="Scripts\Client\Views\details.html" />
     <Content Include="Scripts\Client\Views\edit.html" />
