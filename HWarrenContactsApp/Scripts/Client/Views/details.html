@@ -5,10 +5,11 @@
             <strong> <h4>Contact Details for: </h4></strong>
 
             <h5>{{fullName()}} </h5>
-            <div>
-                            <img class="thumb" ng-src="{{stepsModel}}" id="img1" />
 
-                        </div>
+        <div>
+            <b>Photo:</b> <img src="/UploadedFiles/{{PhoneRecord.MediaUrl}}" />
+
+        </div>
 
 
         </div>
@@ -27,9 +28,6 @@
         </b>
         <div>
             <b>Date of Birth:</b> {{PhoneRecord.Birthdate | date:"MM/dd/yyyy"}}
-        </div>
-        <div>
-            <b>Photo:</b> {{PhoneRecord.MediaUrl}}
         </div>
         <div>
             <b> MediaUrl</b>
