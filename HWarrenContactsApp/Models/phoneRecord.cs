@@ -29,18 +29,18 @@ namespace HWarrenContactsApp.Models
 
         [DisplayFormat(DataFormatString = "{0:MM/dd/yyyy}", ApplyFormatInEditMode = true)]
         public DateTimeOffset? Birthdate { get; set; }
-        public string MediaUrl { get; set; }
+
+        //public string MediaUrl { get; set; }
+        public int? FileUploadId { get; set; }
         [AllowHtml]
         public string Comments { get; set; }
 
         //public virtual ICollection<relationshipType> relationshipTypes { get; set; }
 
+        public virtual FileUpload FileUpload { get; set; }
 
     }
 
-    //public class PhoneRecordsDb : DbContext
-    //{
-    //public DbSet<PhoneRecord> PhoneRecords { get; set; }
-    //}
+
 
 }
