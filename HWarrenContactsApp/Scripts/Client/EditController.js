@@ -1,4 +1,9 @@
 ﻿(function (app) {
+
+
+
+
+
 	var EditController = function ($scope, contactService) {
 		$scope.isEditable = function () {
 			return $scope.edit && $scope.edit.PhoneRecord;
@@ -44,6 +49,8 @@
 					$scope.edit.PhoneRecord = null;
 				});
 		};
+
+
 
 		//this code from blogposts, remove since it doesn't also display the image right away
 		var loadFile = function (event) {
@@ -109,6 +116,9 @@
 			});
 
 		};
+
+	    //dropdown menu items
+
 
 
 
