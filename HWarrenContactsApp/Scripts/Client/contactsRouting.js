@@ -1,5 +1,5 @@
 ﻿(function () {
-    var app = angular.module("contactsRouting", ["ngRoute"]);
+    var app = angular.module("contactsRouting", ["ngRoute","myDirectivesApplication"]);
 	// Your app's root module...
 	//properly serialize data to be submitted to the POST
 	angular.module('MyModule', [], function ($httpProvider) {
@@ -65,10 +65,10 @@
     //var app =
     //    	angular.module('contactsRouting', ['myDirectivesApplication']);
 
-     var varMyApplication =
-			angular.module('contactsRouting', ['myDirectivesApplication']);
 
-		varMyApplication.controller('EditController', function ($scope) {
+		//	angular.module('contactsRouting', ['myDirectivesApplication']);
+
+		app.controller('EditController', function ($scope) {
 
 			$scope.users = [
 				{ "id": 1, "name": "Friends" },
