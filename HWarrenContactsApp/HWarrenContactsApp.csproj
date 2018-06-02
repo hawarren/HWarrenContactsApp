@@ -257,7 +257,6 @@
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\Client\contactsRouting.js" />
     <Content Include="Scripts\Client\DetailsController.js" />
-    <Content Include="Scripts\Client\dropdownMultiselect.js" />
     <Content Include="Scripts\Client\EditController.js" />
     <Content Include="Scripts\Client\ListController.js" />
     <Content Include="Scripts\Client\contactService.js" />
@@ -1083,6 +1082,7 @@
     <Content Include="Scripts\popper-utils.min.js.map" />
     <Content Include="Scripts\popper-utils.js.map" />
     <Content Include="Scripts\version.json" />
+    <Content Include="Views\Home\Index - Copy.cshtml" />
     <None Include="Views\Shared\_ImageUploaderView.cshtm.oldl" />
     <Content Include="Views\PhoneRecords\Create.cshtml" />
     <Content Include="Views\PhoneRecords\Delete.cshtml" />

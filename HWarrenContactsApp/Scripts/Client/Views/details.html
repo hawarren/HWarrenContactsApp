@@ -1,64 +1,46 @@
 ﻿<div ng-controller="DetailsController">
-    <div class="container">
+	<div class="container">
 
-        <div>
-            <strong> <h4>Contact Details for: </h4></strong>
+		<div>
+			<strong> <h4>Contact Details for: </h4></strong>
 
-            <h5>{{fullName()}} </h5>
+			<h5>{{fullName()}} </h5>
 
-            <div>
-                <b>Photo:</b> <img src="/UploadedFiles/{{PhoneRecord.MediaUrl}}" />
+			<div>
+				<b>Photo:</b> <img src="/UploadedFiles/{{PhoneRecord.MediaUrl}}" />
 
-            </div>
-
-
-        </div>
-        <div>
-            <b>Email:</b> {{PhoneRecord.Email}}
-        </div>
-        <div>
-            <strong>Phone number:</strong> {{"(" + PhoneRecord.Phone.toString().slice(0,3) + ")" + ' ' + PhoneRecord.Phone.toString().slice(3,6) + '-' + PhoneRecord.Phone.toString().slice(6,10) }}
-        </div>
-        <b>
-            <br />
-            <u>Additional Info</u>
+			</div>
 
 
+		</div>
+		<div>
+			<b>Email:</b> {{PhoneRecord.Email}}
+		</div>
+		<div>
+			<strong>Phone number:</strong> {{"(" + PhoneRecord.Phone.toString().slice(0,3) + ")" + ' ' + PhoneRecord.Phone.toString().slice(3,6) + '-' + PhoneRecord.Phone.toString().slice(6,10) }}
+		</div>
+		<b>
+			<br />
+			<u>Additional Info</u>
 
-        </b>
-        <div>
-            <b>Date of Birth:</b> {{PhoneRecord.Birthdate | date:"MM/dd/yyyy"}}
-        </div>
-        <div>
-            <b> MediaUrl</b>
-            {{PhoneRecord.MediaUrl}}
-            {{theFile.name}}
-        </div>
-        <div>
-            <b>Contact relationship Category</b>: {{PhoneRecord.relationshipTypes}}
-        </div>
-        <div>
-            <b>Comments:</b> {{PhoneRecord.Comments}}
-        </div>
-        <button ng-click="edit()">Edit</button>
-    </div>
-    <div ng-include="'/Scripts/Client/views/edit.html'"></div>
+
+
+		</b>
+		<div>
+			<b>Date of Birth:</b> {{PhoneRecord.Birthdate | date:"MM/dd/yyyy"}}
+		</div>
+		<div>
+			<b> MediaUrl</b>
+			{{PhoneRecord.MediaUrl}}
+			{{theFile.name}}
+		</div>
+		<div>
+			<b>Contact relationship Category</b>: {{PhoneRecord.relationshipTypes}}
+		</div>
+		<div>
+			<b>Comments:</b> {{PhoneRecord.Comments}}
+		</div>
+		<button ng-click="edit()">Edit</button>
+	</div>
+	<div ng-include="'/Scripts/Client/views/edit.html'"></div>
 </div>
-
-
-<!--Temporary place for template code so I can use intellisense-->
-"<div class='btn-group' data-ng-class='{open: open}'>" +
-    "<button class='btn btn-small'>Select...</button>" +
-"<button class='btn btn-small dropdown-toggle'
-         data-ng-click='openDropdown()'>
-    <span class="caret"></span></button> +
-"<ul class='dropdown-menu' aria-labelledby='dropdownMenu'>" +
-    "<li><a data-ng-click='selectAll()'>
-        <span class="glyphicon glyphicon-ok green"
-              aria-hidden="true>"></span>Check All</a></li> +
-    "<li class='divider'></li>"
-    </a></li>"
-    </ul>"
-
-    
-

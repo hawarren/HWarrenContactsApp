@@ -110,6 +110,9 @@
 
 		};
 
+
+
+
 	};
 	app.controller("EditController", EditController);
 }(angular.module("contactsRouting")));
