@@ -118,7 +118,10 @@
 		};
 
 	    //dropdown menu items
-      //  app.controller('EditController', function ($scope) {
+          var app =
+			angular.module('contactsRouting', ['myDirectivesApplication']);
+
+		//app.controller('EditController', function ($scope) {
 
 			$scope.users = [
 				{ "id": 1, "name": "Friends" },
@@ -131,6 +134,7 @@
 			$scope.selectedUserIds = ["select 1 or many relationship(s)"];
 
 		//});
+
 
 
 

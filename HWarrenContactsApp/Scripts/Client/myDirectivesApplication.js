@@ -1,8 +1,8 @@
 ﻿(function () {
-      var varMyDirectivesApplication =
+      var app =
 			angular.module('myDirectivesApplication', []);
 
-		varMyDirectivesApplication.directive('dropdownMultiselect', function () {
+		app.directive('dropdownMultiselect', function () {
 			return {
 				restrict: 'E',
 				scope: {
