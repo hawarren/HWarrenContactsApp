@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+	<meta name="viewport" content="width=device-width" />
+
+	<title>Creating Multi Select Drop Down List</title>
+
+	<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+
+    <!--<script src="Scripts/angular.min.js"></script>-->
+        <script src="~/Scripts/angular.js"></script>
+
+
+
+
+    <script src="~/Scripts/Client/contactsRouting.js"></script>
+    <script src="~/Scripts/Client/myDirectivesApplication.js"></script>
+    <script src="~/Scripts/Client/EditController.js"></script>
+	<script>
+
+
+
+
+	</script>
+
+	<style>
+		ul.dropdown-menu li {
+			cursor: pointer;
+		}
+
+			ul.dropdown-menu li span.red {
+				color: red;
+			}
+
+			ul.dropdown-menu li span.green {
+				color: green;
+			}
+	</style>
+</head>
+<body>
+	<div class="container" ng-app="contactsRouting" ng-controller="EditController">
+		<br />
+		<br />
+
+		<div class="row">
+			<div class="col-xs-6">
+				<dropdown-multiselect model="selectedUserIds" options="users"></dropdown-multiselect>
+			</div>
+		    <div class="col-xs-6">
+		        <ul>
+		            <li data-ng-repeat="item in selectedUserIds">
+		                {{ item }}
+		            </li>
+		        </ul>
+		    </div>
+		        <div class="col-lg-12">
+		    <div class="table">
+
+		        </div>
+		    </div>
+		</div>
+	</div>
+</body>
+</html>
